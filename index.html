@@ -699,11 +699,22 @@ Always learning, always improving. </p>
 <button class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'});" title="Back to top">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
-   
+   <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+</body>
+</html>
+
 
 </body>
 
 </html>
+
 
 
 
