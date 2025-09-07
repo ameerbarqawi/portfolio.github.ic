@@ -201,38 +201,38 @@
       transition: 0.3s ease;
     }
 
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+   .navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: white;
-      letter-spacing: 1px;
-    }
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
-    .nav-links a {
-      position: relative;
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-    .nav-links a::after {
-       content: "";
+.nav-links a::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -240,109 +240,115 @@
   height: 2px;
   background-color: #00bfff;
   transition: width 0.3s ease;
-    }
+}
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+.nav-links a:hover::after {
+  width: 100%;
+}
 
-    .cta {
-      padding: 0.6rem 1.4rem;
-      background: linear-gradient(135deg, #007bff, #00d4ff);
-      color: #fff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.cta {
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-    }
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
 
-    /* Mobile */
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-      user-select: none;
-      
-    }
+/* زر المينيو (الهامبرغر) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
 
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 1.5rem;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        animation: slideDown 0.3s ease forwards;
-      }
+/* 📱 موبايل */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(42, 154, 229, 0.95);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    animation: slideDown 0.3s ease forwards;
+    z-index: 999;
+  }
 
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 0.5rem 0;
-        font-size: 1.1rem;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .cta {
-        margin-top: 10px;
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-   .social-links {
+  .nav-links.active {
     display: flex;
-    justify-content: flex-start; /* 👈 يخليهم على الشمال */
-    gap: 15px;
-    margin-top: 15px;
   }
 
-  .social-icon {
-    width: 35px; height: 35px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
-    color: #fff;
-    background: rgba(255,255,255,0.05);
-    transition: all .3s ease;
-    text-decoration: none;  /* 🔥 يشيل الخطوط والنقاط */
+  .nav-links a {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: white;
   }
 
-  .social-icon i {
-    pointer-events: none; /* يخلي الأيقونة نفسها بدون أي underline */
+  .menu-toggle {
+    display: block;
   }
 
-  .social-icon:hover {
-    transform: scale(1.15);
-    color: #fff;
-    text-decoration: none;  /* 🔥 مهم جداً */
+  .cta {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
   }
+}
 
-  /* Hover colors */
-  .fb:hover { background: #1877f2; }
-  .tw:hover { background: #1da1f2; }
-  .ig:hover { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
-  .tk:hover { background: #000; }
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  width: 35px; height: 35px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  transition: all .3s ease;
+  text-decoration: none;
+}
+
+.social-icon i {
+  pointer-events: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hover colors */
+.fb:hover { background: #1877f2; }
+.tw:hover { background: #1da1f2; }
+.ig:hover { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
+.tk:hover { background: #000; }
+
       .avatar2 {
     width: 100%;
     max-width: 300px;       /* الحجم الأساسي */
@@ -698,5 +704,6 @@ Always learning, always improving. </p>
 </body>
 
 </html>
+
 
 
